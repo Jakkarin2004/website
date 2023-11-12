@@ -51,13 +51,18 @@ $setfood = $village->fetch();
   <link rel="stylesheet" href="../css/page3.css">
   <link rel="stylesheet" href="../css/responsive3.css">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Taviraj:ital,wght@1,200&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Niramit:wght@500&family=Taviraj&display=swap" rel="stylesheet">
+<style>
+    .font-body{
+      font-family: 'Taviraj', serif;
+      font-family: 'Niramit', sans-serif;
+    }
+</style>
 </head>
 
-<body>
+<body class="font-body">
   <div class="content">
     <div class="content_village">
       <h1>สำรับอาหาร หมู่บ้านหาดเบี้ย</h1>

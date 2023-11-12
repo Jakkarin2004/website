@@ -22,15 +22,21 @@ $setfood = $village->fetchAll();
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="../css/page2.css" />
+  <link rel="stylesheet" href="../css/tailwind.css" />
   <link rel="stylesheet" href="../css/responsive2.css" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Taviraj:ital,wght@1,200&display=swap" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Niramit:wght@500&family=Taviraj&display=swap" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Niramit:wght@500&family=Taviraj&display=swap" rel="stylesheet">
+<style>
+    .font-body{
+      font-family: 'Taviraj', serif;
+      font-family: 'Niramit', sans-serif;
+    }
+</style>
 </head>
 
-<body>
+<body class="font-body">
 <?php include '../include/navbar.php' ?>
   <div class="content">
     <div class="content_village">

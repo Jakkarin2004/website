@@ -10,17 +10,23 @@ include "../Config/DB.php";
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>หมู่บ้านในโครงการ</title>
   <link rel="stylesheet" href="../css/page1.css">
+  <link rel="stylesheet" href="../css/tailwind.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../css/responsive1.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Taviraj:ital,wght@1,200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Niramit:wght@500&family=Taviraj&display=swap" rel="stylesheet">
+<style>
+    .font-body{
+      font-family: 'Taviraj', serif;
+      font-family: 'Niramit', sans-serif;
+    }
+</style>
 </head>
 
-<body>
+<body class="font-body">
   <?php include '../include/navbar.php' ?>
   <!-- Slideshow container -->
   <div class="bg_slide">
