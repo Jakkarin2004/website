@@ -19,8 +19,10 @@
           </li>
           <li>
             <div class="dropdown">
-              <a class="dropbtn">หมู่บ้าน<i class="ml-2 fa-solid fa-caret-right"></i></a>
-              <div class="dropdown-content">
+              <div >
+              <a  class="dropbtn">หมู่บ้าน<i class="ml-2 fa-solid fa-caret-down"></i></a>
+              </div>
+              <div class="dropdown-content" >
                 <div class="drop-menu">
                   <a href="../website/deck.php">บ้านหาดเบี้ย</a>
                   <a href="#">บ้านกกคู้</a>
@@ -31,26 +33,22 @@
           </li>
           <li>
             <div class="dropdown">
-              <a  class="dropbtn">สำรับอาหาร</a>
+              <a class="dropbtn">สำรับอาหาร</a>
               <div class="dropdown-content">
                 <div class="drop-menu">
+                 <div>
                   <a >บ้านหาดเบี้ย <i class="ml-2 fa-solid fa-caret-right"></i></a>
-                  <div class="drop-item">
+                 </div>
+                  <div class="drop-item" >
                     <a href="">สำรับอาหารชุดที่ 1</a>
                     <a href="">สำรับอาหารชุดที่ 2</a>
                     <a href="">สำรับอาหารชุดที่ 3</a>
                   </div>
                 </div>
                 <div class="drop-menu">
+                 <div>
                   <a >บ้านกกคู้ <i class="ml-2 fa-solid fa-caret-right"></i></a>
-                  <div class="drop-item">
-                    <a href="">สำรับอาหารชุดที่ 4</a>
-                    <a href="">สำรับอาหารชุดที่ 5</a>
-                    <a href="">สำรับอาหารชุดที่ 6</a>
-                  </div>
-                </div>
-                <div class="drop-menu">
-                  <a >บ้านกุดป่อง <i class="ml-2 fa-solid fa-caret-right"></i></a>
+                 </div>
                   <div class="drop-item">
                     <a href="">สำรับอาหารชุดที่ 7</a>
                     <a href="">สำรับอาหารชุดที่ 8</a>
@@ -62,34 +60,23 @@
           </li>
           <li>
             <div class="dropdown">
-              <a  class="dropbtn">ตำรับอาหาร</a>
+              <a class="dropbtn">ตำรับอาหาร</a>
               <div class="dropdown-content">
                 <div class="drop-menu">
-                  <a >บ้านหาดเบี้ย<i class="ml-2 fa-solid fa-caret-right"></i></a>
-                  <div class="drop-item">
-                    <a href="">ตำรับอาหารชุดที่ 1</a>
-                    <a href="">ตำรับอาหารชุดที่ 2</a>
-                    <a href="">ตำรับอาหารชุดที่ 3</a>
-                    <a href="">ตำรับอาหารชุดที่ 4</a>
-                    <a href="">ตำรับอาหารชุดที่ 5</a>
-                    <a href="">ตำรับอาหารชุดที่ 6</a>
-                    <a href="">ตำรับอาหารชุดที่ 7</a>
-                  </div>
-                </div>
-                <div class="drop-menu">
-                  <a >บ้านกกคู้<i class="ml-2 fa-solid fa-caret-right"></i></a>
-                  <div class="drop-item">
-                    <a href="">ตำรับอาหารชุดที่ 4</a>
-                    <a href="">ตำรับอาหารชุดที่ 5</a>
-                    <a href="">ตำรับอาหารชุดที่ 6</a>
-                  </div>
-                </div>
-                <div class="drop-menu">
-                  <a>บ้านกุดป่อง<i class="ml-2 fa-solid fa-caret-right"></i></a>
-                  <div class="drop-item">
-                    <a href="">ตำรับอาหารชุดที่ 7</a>
-                    <a href="">ตำรับอาหารชุดที่ 8</a>
-                    <a href="">ตำรับอาหารชุดที่ 9</a>
+                 <div>
+                  <a >บ้านหาดเบี้ย <i class="ml-2 fa-solid fa-caret-right"></i></a>
+                 </div>
+                  <div class="drop-item" >
+                   <div class="drop-menu">
+                    <a href="">สำรับอาหารชุดที่ 1</a>
+                      <div class="drop-item" >
+                        <a href="">สำรับอาหารชุดที่ 1</a>
+                        <a href="">สำรับอาหารชุดที่ 2</a>
+                        <a href="">สำรับอาหารชุดที่ 3</a>
+                       </div>
+                   </div>
+                    <a href="">สำรับอาหารชุดที่ 2</a>
+                    <a href="">สำรับอาหารชุดที่ 3</a>
                   </div>
                 </div>
               </div>
@@ -115,12 +102,36 @@
       </nav>
     </header>
     <script>
-      document
-        .getElementById("mobile-menu")
-        .addEventListener("click", function () {
-          var navList = document.querySelector(".nav-main");
-          navList.classList.toggle("show");
-        });
+      document.getElementById('mobile-menu').addEventListener('click', function() {
+      var navList = document.querySelector('.nav-main');
+      navList.classList.toggle('show');
+    });
+
+
+       // เลือกทุกองค์ประกอบที่มี class "drop-menu"
+      var dropMenus = document.querySelectorAll(".drop-menu");
+
+        // Iterate ผ่านทุก drop menu
+        dropMenus.forEach(function(dropMenu) {
+          // เพิ่ม event listener สำหรับคลิกที่ drop menu
+          dropMenu.addEventListener("click", function() {
+            // หากมี dropdown content ที่เกี่ยวข้อง
+            var dropdownContent = this.querySelector(".drop-item");
+            if (dropdownContent) {
+              // เพิ่มหรือลบ class "show" ที่ dropdown content
+              dropdownContent.classList.toggle("show");
+
+              // ตรวจสอบ class "show" เพื่อปรับ display
+              if (dropdownContent.classList.contains("show")) {
+                dropdownContent.style.display = "block";
+                
+              } else {
+                dropdownContent.style.display = "none";
+
+              }
+            }
+          });
+        }); 
     </script>
   </body>
 </html>

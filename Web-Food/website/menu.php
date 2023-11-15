@@ -48,8 +48,8 @@ $setfood = $village->fetch();
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="../css/page3.css">
-  <link rel="stylesheet" href="../css/responsive3.css">
+  <link rel="stylesheet" href="../css/menu.css">
+  <link rel="stylesheet" href="../css/menurespon.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -196,6 +196,9 @@ $setfood = $village->fetch();
           <p class="text_v">
           <?php echo $detail ?>
           </p>
+          <a href="/Web-Food/website/recipe.php" type="button" class="btn-food" >
+            ข้อมูลเพิ่มเติม
+          </a>
         </div>
       </div>
       <?php } ?>
