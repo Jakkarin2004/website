@@ -25,7 +25,14 @@ F2.FoodName AS FoodName2,
 F3.FoodName AS FoodName3, 
 F4.FoodName AS FoodName4, 
 F5.FoodName AS FoodName5, 
-F6.FoodName AS FoodName6 
+F6.FoodName AS FoodName6,
+F.IdFood AS IdFood0, 
+F1.IdFood AS IdFood1, 
+F2.IdFood AS IdFood2, 
+F3.IdFood AS IdFood3, 
+F4.IdFood AS IdFood4, 
+F5.IdFood AS IdFood5,
+F6.IdFood AS IdFood6
 FROM setfood AS S 
 LEFT JOIN village AS V ON S.VillageSet = V.Id 
 LEFT JOIN food AS F ON S.FoodName0 = F.IdFood 
@@ -160,6 +167,7 @@ $setfood = $village->fetch();
                       $food = $setfood['FoodName' . $i];
                       $detail = $setfood['FoodDetail' . $i];
                       $ImgFood = $setfood['ImgFood' . $i];
+                      $IdFood = $setfood['IdFood'.$i];
                     ?>
       <div class="food-item">
         <div class="food-image">
@@ -196,7 +204,7 @@ $setfood = $village->fetch();
           <p class="text_v">
           <?php echo $detail ?>
           </p>
-          <a href="/Web-Food/website/recipe.php" type="button" class="btn-food" >
+          <a href="/Web-Food/website/recipe.php?id=<?php echo $IdFood ?>" type="button" class="btn-food" >
             ข้อมูลเพิ่มเติม
           </a>
         </div>

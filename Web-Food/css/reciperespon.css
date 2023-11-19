@@ -65,6 +65,16 @@
     gap: 1rem;
   }
   /*  */
+  .food-village {
+    margin: 0rem auto;
+    max-width: 1000px;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 0.5rem;
+  }
+  /*  */
   .control_village {
     margin: 1.5rem 0;
     display: grid;
@@ -156,7 +166,7 @@
   }
   .food-village{
     display: grid;
-    grid-template-columns: repeat(1,1fr);
+    grid-template-columns: repeat(2,1fr);
     gap: 0.5rem;
   }
 }

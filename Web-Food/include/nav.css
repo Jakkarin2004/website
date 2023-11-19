@@ -10,6 +10,10 @@ body{
   display: flex;
   background-color: white;
   box-shadow: 0px 1px 4px rgba(0,0,0);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 .main-login{
   display: flex;

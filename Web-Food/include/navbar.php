@@ -45,16 +45,6 @@
                     <a href="">สำรับอาหารชุดที่ 3</a>
                   </div>
                 </div>
-                <div class="drop-menu">
-                 <div>
-                  <a >บ้านกกคู้ <i class="ml-2 fa-solid fa-caret-right"></i></a>
-                 </div>
-                  <div class="drop-item">
-                    <a href="">สำรับอาหารชุดที่ 7</a>
-                    <a href="">สำรับอาหารชุดที่ 8</a>
-                    <a href="">สำรับอาหารชุดที่ 9</a>
-                  </div>
-                </div>
               </div>
             </div>
           </li>
