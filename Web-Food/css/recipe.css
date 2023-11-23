@@ -23,7 +23,7 @@ html {
   color: #ffffff;
 }
 
-body {
+.body-main{
   font-family: "Taviraj", serif;
   font-family: "Niramit", sans-serif;
 }
@@ -132,23 +132,7 @@ body {
 .food-village .food-item .food-text p {
   padding: 0 1rem;
 }
-.btn-food {
-  border-radius: 5px;
-  width: 30%;
-  display: flex;
-  margin: 1rem auto;
-  height: 35px;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid rgb(119, 119, 119);
-  color: #713f06;
-  transition: 0.4s;
-}
-.btn-food:hover {
-  background-color: #ff8d0b;
-  color: #fff;
-  border: 1px solid rgb(194, 194, 194);
-}
+
 
 /* popup */
 /* ซ่อน Popup Image เริ่มต้น */

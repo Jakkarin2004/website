@@ -39,8 +39,6 @@ include "../Config/DB.php";
             <div class="text-respon">
               <h1>โครงการ</h1>
               <h1 class="css-style">พลิกโฉมมหาวิทยาลัย</h1>
-              <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quos sit fuga minus reiciendis
-                accusamus dignissimos dolores consectetur error vero.</p> -->
             </div>
           </div>
         </div>
@@ -51,8 +49,6 @@ include "../Config/DB.php";
             <div class="text-respon">
               <h1>โครงการ</h1>
               <h1 class="css-style">พลิกโฉมมหาวิทยาลัย</h1>
-              <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quos sit fuga minus reiciendis
-                accusamus dignissimos dolores consectetur error vero.</p> -->
             </div>
           </div>
         </div>
@@ -63,8 +59,6 @@ include "../Config/DB.php";
             <div class="text-respon">
               <h1>โครงการ</h1>
               <h1 class="css-style">พลิกโฉมมหาวิทยาลัย</h1>
-              <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quos sit fuga minus reiciendis
-                accusamus dignissimos dolores consectetur error vero.</p> -->
             </div>
           </div>
         </div>
@@ -85,7 +79,7 @@ include "../Config/DB.php";
   </div>
   <section class="slide-main" id="home">
     <div class="slide-Lmain">
-      <h1 class="text-left text-2xl p-2 text-slate-600 font-bold">หมู่บ้านในโครงการ</h1>
+      <h1 class="text-show text-left text-2xl p-2 text-slate-600 font-bold">หมู่บ้านในโครงการ</h1>
       <div class="slider_slide">
 <?php
  $stmt = $conn->query("SELECT * FROM village");
@@ -100,11 +94,11 @@ foreach($user as $user){
                 alt="Image 1" /></a>
           </div>
           <div class="text_slide">
-            <h1>ชื่อหมู่บ้าน :<?php echo $user['Name']; ?> </h1>
+            <h1>ชื่อหมู่บ้าน :<?php echo $user['Name']; ?></h1>
             <p>ที่อยู่ : <?php echo $user['Location']; ?></p>
             <a href="/Web-Food/website/deck.php?id=<?php echo $user['Id']; ?>" type="button" class="bg-white text-white font-bold py-2 px-4 rounded">
-    ข้อมูลเพิ่มเติม
-</a>
+              ข้อมูลเพิ่มเติม
+          </a>
 
           </div>
         </div>     

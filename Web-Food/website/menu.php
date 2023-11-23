@@ -72,7 +72,7 @@ $setfood = $village->fetch();
 <body class="font-body">
   <div class="content">
     <div class="content_village">
-      <h1>สำรับอาหาร หมู่บ้านหาดเบี้ย</h1>
+      <h1>สำรับอาหาร <?php echo $setfood['Name'] ?></h1>
     </div>
   </div>
   <div class="main-village">
@@ -140,7 +140,7 @@ $setfood = $village->fetch();
       <div class="village-story">
         <div class="text-village">
           <div class="text_vill">
-            <h1 class="text-left mt-1 text_h1">สำรับอาหารชุดที่ 1</h1>
+            <h1 class="text-left mt-1 text_h1"><?php echo $setfood['SetName'] ?></h1>
             <h1 class="text_h1 text-left mt-3">มีตำรับอาหารดังนี้</h1>
             <p class="text_v">  
             <?php  $totalsetfood = 0;
@@ -153,63 +153,14 @@ $setfood = $village->fetch();
                     } 
                     for ($i = 0; $i < $totalsetfood; $i++) {
                       $food = $setfood['FoodName' . $i];
+                      $Idfood = $setfood['IdFood' . $i];
                     ?>
-               <?php echo ($i+1),". ",$food; ?><br>
+               <a href="../website/recipe.php?id=<?php echo $Idfood ?>"><?php echo ($i+1),". ",$food; ?><i class="ml-1 fa-solid fa-caret-left"></i></a><br>
             </p>
             <?php } ?>
           </div>
         </div>
       </div>
-    </div>
-    <div class="food-village" id="food-table">
-      <h1 class="text-2xl text-left text-slate-700">ตำรับอาหาร</h1>
-      <?php   for ($i = 0; $i < $totalsetfood; $i++) {
-                      $food = $setfood['FoodName' . $i];
-                      $detail = $setfood['FoodDetail' . $i];
-                      $ImgFood = $setfood['ImgFood' . $i];
-                      $IdFood = $setfood['IdFood'.$i];
-                    ?>
-      <div class="food-item">
-        <div class="food-image">
-          <div>
-            <img
-            <?php echo 'src="data:image/jpeg;base64,'.base64_encode($ImgFood).'" ' ?>
-              alt=""
-              >
-          </div>
-            <div class="img_main">
-              <div class="img_flex">
-                <img src="https://images.unsplash.com/photo-1682685796444-acc2f5c1b7b6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-              </div>
-              <div class="img_flex">
-                <img src="https://images.unsplash.com/photo-1682685796444-acc2f5c1b7b6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-              </div>
-              <div class="img_flex">
-                <img src="https://images.unsplash.com/photo-1682685796444-acc2f5c1b7b6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-              </div>
-              <div class="img_flex">
-                <img src="https://images.unsplash.com/photo-1682685796444-acc2f5c1b7b6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-              </div>
-            </div>
-        </div>
-        <div class="food-text">
-          <h1 class="text-left text-xl mt-2">ตำรับอาหารที่  <?php echo ($i+1),". ",$food; ?></h1>
-          <h1 class="text-l mt-2">ส่วนผสม</h1>
-          <p class="text_v">ข้าวเหนียวขัดขาวดิบ (ข้าวสาร)</p>
-          <h1 class="text-l mt-2">หน่วยนับ</h1>
-          <p>-</p>
-          <h1 class="text-l mt-2">น้ำหนัก</h1>
-          <p>-</p>
-          <h1 class="text-l mt-2">วิธีการทำ</h1>
-          <p class="text_v">
-          <?php echo $detail ?>
-          </p>
-          <a href="/Web-Food/website/recipe.php?id=<?php echo $IdFood ?>" type="button" class="btn-food" >
-            ข้อมูลเพิ่มเติม
-          </a>
-        </div>
-      </div>
-      <?php } ?>
     </div>
   </div>
   <?php include '../include/footer.php' ?>

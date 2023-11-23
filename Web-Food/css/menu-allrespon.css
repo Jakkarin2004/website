@@ -1,5 +1,4 @@
 @media (max-width:1300px){
-
 }
 @media (max-width:1100px){
   .main-village{
@@ -59,16 +58,6 @@
     gap: 1rem;
   }
   /*  */
-  .food-village {
-    margin: 0rem auto;
-    max-width: 1000px;
-    border-radius: 0.5rem;
-    padding: 1rem;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 0.5rem;
-  }
-  /*  */
   .control_village {
     margin: 1.5rem 0;
     display: grid;
@@ -97,6 +86,7 @@
   }
   .main-village{
     max-width: 100%;
+    padding: 10px;
   }
   .flex_village{
     display: none;
@@ -133,14 +123,10 @@
     font-size: 4vw;
   }
   /*  */
-  .food-village{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 0.5rem;
-  }
   .food-village .food-item {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
     border: 1px solid rgb(219, 218, 218);
     box-shadow: 0px 10px 15px rgb(225, 225, 225);
     margin: 1rem 0;
@@ -155,9 +141,7 @@
   
 }
 @media (max-width:300px){
-  .food-village{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 0.5rem;
+  .btn-food{
+    font-size: 1.2vh;
   }
 }

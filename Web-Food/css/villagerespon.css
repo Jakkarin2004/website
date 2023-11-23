@@ -147,30 +147,6 @@
     padding: 1rem;
   }
 
-  /* footer */
-  .footer {
-    margin: 2rem 0 0 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    width: 100%;
-    background: linear-gradient(100deg, rgb(0, 0, 0), rgb(2, 14, 45));
-    height: 100%;
-  }
-  .logo-foot {
-    max-width: 100%;
-  }
-  .about-footer {
-    max-width: 30%;
-    display: grid;
-    justify-content: center;
-  }
-  .address-footer {
-    max-width: 30%;
-  }
-  .contact-footer {
-    max-width: 30%;
-  }
 }
 
 @media (max-width: 600px) {
@@ -196,6 +172,15 @@
   .text h1 {
     font-size: 35px;
     line-height: 40px;
+  }
+  .slide .text_slide h1 {
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  .slide .text_slide p {
+    font-size: 0.5rem;
+    letter-spacing: 1px;
   }
 
   .text p {
@@ -235,6 +220,9 @@
     overflow-y: auto;
     height: 30rem;
   }
+  .slide-Lmain .text-show{
+    font-size: 0.9rem;
+  }
 
   .slider_slide {
     display: grid;
@@ -265,69 +253,7 @@
     font-size: 2vw;
   }
 
-  /* footer */
-  .footer {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 100%;
-    background: linear-gradient(100deg, rgb(0, 0, 0), rgb(2, 14, 45));
-  }
-
-  .logo-foot {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .logo-foot i {
-    font-size: 2rem;
-    color: #ffffff;
-  }
-
-  .about-footer {
-    max-width: 50%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .about-footer h1 {
-    font-size: 0.7rem;
-  }
-
-  .about-footer p {
-    font-size: 0.5rem;
-  }
-
-  .address-footer {
-    max-width: 45%;
-  }
-  .address-footer h1 {
-    font-size: 0.7rem;
-  }
-
-  .address-footer p {
-    font-size: 0.5rem;
-  }
-
-  .contact-footer {
-    width: 100%;
-    display: grid;
-    justify-content: center;
-  }
-  .contact-footer h1 {
-    font-size: 0.7rem;
-    line-height: 20px;
-  }
-
-  .contact-footer p {
-    font-size: 0.5rem;
-  }
-
-  .contact-footer i {
-    font-size: 0.5rem;
-    line-height: 20px;
-  }
+  
 }
 @media (max-width: 550px) {
   .about-main {
@@ -373,20 +299,5 @@
     height: 50vh;
     text-align: left;
     display: flex;
-  }
-  .footer {
-    height: 100%;
-  }
-  .about-footer {
-    max-width: 45%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .address-footer {
-    max-width: 45%;
-  }
-  .address p {
-    font-size: 0.5px;
   }
 }

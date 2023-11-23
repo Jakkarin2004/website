@@ -309,7 +309,7 @@ $ingredient = $foodName->fetchAll();
             ?><tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
             <td scope="row" class="px-6 py-4 font-normal text-gray-600 font-medium text-gray-900 whitespace-nowrap dark:text-white font"><?php echo $startRowNumber + $row; ?></td>
             <td class="p-2">
-                <img src="data:image/jpeg;base64,<?php echo base64_encode($item['ImgFood    ']); ?>" alt="Food Image" style="width: 150px; height: 100px" class="rounded-lg thumbnail">
+                <img src="data:image/jpeg;base64,<?php echo base64_encode($item['ImgFood']); ?>" alt="Food Image" style="width: 150px; height: 100px" class="rounded-lg thumbnail">
             </td>
             <td class="px-6 py-4 font-normal text-gray-600 font"><?php echo $item['FoodName']; ?></td>
             <!-- <td class="px-6 py-4 font-normal text-gray-600 font text-container" maxlength="8"><?php echo $item['Detail']; ?></td> -->
