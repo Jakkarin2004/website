@@ -66,105 +66,75 @@ $setfood = $stmt->fetchAll();
 <?php include '../include/navbar.php' ?>
   <div class="content">
     <div class="content_village">
-      <h1>สำรับอาหาร </h1>
+    <h1 class="text-gray-900 text-xl font-bold">สำรับอาหาร</h1>
     </div>
   </div>
-  <div class="main-village">
-  <h1 class="text-gray-900 text-xl font-bold">สำรับอาหาร</h1>
+  <!--  -->
   <?php foreach($setfood as $setfood){ ?>
-    <div class="control_village">
-      <div class="image-village">
-        <img
-          src="https://images.unsplash.com/photo-1699463701578-9970c5bec195?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNHx8fGVufDB8fHx8fA%3D%3D"
-          alt=""
-          onclick="mainopenPopup()" class="flex1"
-          >
-          <div id="mainopenPopup" class="popup">
-            <span class="close-button" onclick="mainclosePopup()">&times;</span>
-            <img
-              src="https://images.unsplash.com/photo-1699463701578-9970c5bec195?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Image" />
-          </div>
-        <div class="flex_village">
-          <div class="Vill-flex">
-            <img
-              src="https://images.unsplash.com/photo-1682686580391-615b1f28e5ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=600&q=60"
-              alt="" onclick="openPopup()" class="flex1">
-            <div id="image-popup" class="popup">
-              <span class="close-button" onclick="closePopup()">&times;</span>
-              <img
-                src="https://images.unsplash.com/photo-1682686580391-615b1f28e5ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=600&q=60"
-                alt="Image" />
+  <div class="container-main">
+        <div class="box-main">
+            <div class="image-main">
+                <div class="image-main">
+                    <div class="image"><img <?php echo 'src="data:image/jpeg;base64,'.base64_encode($setfood['ImgSet']).'" ' ?> alt=""></div>
+                </div>
+                <div class="image-contaner">
+                    <div class="image"><img src="https://images.unsplash.com/photo-1699614614449-d19235e38574?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+                    <div class="image"><img src="https://images.unsplash.com/photo-1700578075560-ebacba6e5d22?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+                      <div class="image"><img src="https://images.unsplash.com/photo-1700403748616-94e54842caf1?q=80&w=1933&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+                    <div class="image"><img src="https://images.unsplash.com/photo-1682685797303-0ad51eb23e13?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+                </div>
+                <div class="popup-image">
+                    <span>&times;</span>
+                    <img src="https://images.unsplash.com/photo-1699614614449-d19235e38574?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                </div>
             </div>
-          </div>
-          <div class="Vill-flex">
-            <img
-              src="https://images.unsplash.com/photo-1695418624968-d027093abdb9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=600&q=60"
-              alt="" onclick="openPopup1()" class="flex1">
-            <div id="image-popup1" class="popup">
-              <span class="close-button" onclick="closePopup1()">&times;</span>
-              <img
-                src="https://images.unsplash.com/photo-1695418624968-d027093abdb9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=600&q=60"
-                alt="Image" />
-            </div>
-          </div>
-          <div class="Vill-flex">
-            <img
-              src="https://images.unsplash.com/photo-1695751240056-c9aea1e799df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxM3x8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60"
-              alt="" onclick="openPopup2()" class="flex1">
-            <div id="image-popup2" class="popup">
-              <span class="close-button" onclick="closePopup2()">&times;</span>
-              <img
-                src="https://images.unsplash.com/photo-1695751240056-c9aea1e799df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxM3x8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60"
-                alt="Image" />
-            </div>
-          </div>
-          <div class="Vill-flex">
-            <img
-              src="https://images.unsplash.com/photo-1682685797660-3d847763208e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwyMXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60"
-              alt="" onclick="openPopup3()" class="flex1">
-            <div id="image-popup3" class="popup">
-              <span class="close-button" onclick="closePopup3()">&times;</span>
-              <img
-                src="https://images.unsplash.com/photo-1682685797660-3d847763208e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwyMXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60"
-                alt="Image" />
-            </div>
-          </div>
-        </div>
-      </div>
-            
-      <div class="village-story">
-        <div class="text-village">
-          <div class="text_vill">
-            
+            <div class="text-main">
             <h1 class="text-left mt-1 text_h1"><?php echo $setfood['SetName'] ?></h1>
-            <h1 class="text_h1 text-left mt-3">มีตำรับอาหารดังนี้</h1>
-            <p class="text_v"> 
-            <?php  $totalsetfood = 0;
-                    for ($i = 0; $i < 7; $i++) { 
-                        if ($setfood['FoodName' . $i] != null) {
-                            $totalsetfood++;
-                        } else {
-                            break; 
-                        }
-                    } 
-                    for ($i = 0; $i < $totalsetfood; $i++) {
-                      $food = $setfood['FoodName' . $i];
-                      $Idfood = $setfood['IdFood' . $i];
-                    ?> 
-              <a href="../website/recipe.php?id=<?php echo $Idfood?>"><?php echo $i+1 , $food ?><i class="ml-1 fa-solid fa-caret-left"></i></a><br>
-              <?php } ?>
-            </p>
-            
-          </div>
+              <h1 class="text_h1 text-left mt-3">มีตำรับอาหารดังนี้</h1>
+              <p class="text_v"> 
+              <?php  $totalsetfood = 0;
+                      for ($i = 0; $i < 7; $i++) { 
+                          if ($setfood['FoodName' . $i] != null) {
+                              $totalsetfood++;
+                          } else {
+                              break; 
+                          }
+                      } 
+                      for ($i = 0; $i < $totalsetfood; $i++) {
+                        $food = $setfood['FoodName' . $i];
+                        $Idfood = $setfood['IdFood' . $i];
+                      ?> 
+                <a class="hov-text" href="../website/recipe.php?id=<?php echo $Idfood?>"><?php echo $i+1,'.', $food ?><i class="ml-1 fa-solid fa-caret-left"></i></a><br>
+                <?php } ?>
+              </p>
+            </div>
         </div>
-      </div>
     </div>
     <?php } ?>
-  </div>
+  <!--  -->
+
+    </div>
 
   <?php include '../include/footer.php' ?>
-  <script src="../js/page3.js"></script>
+  <script>
+    document.querySelectorAll('.image-contaner img').forEach(image =>{
+            image.onclick = () =>{
+                document.querySelector('.popup-image').style.display = "block";
+                document.querySelector('.popup-image img').src = image.getAttribute('src');
+            }
+
+        })
+        document.querySelectorAll('.image-main img').forEach(image =>{
+            image.onclick = () =>{
+                document.querySelector('.popup-image').style.display = "block";
+                document.querySelector('.popup-image img').src = image.getAttribute('src');
+            }
+
+        })
+        document.querySelector('.popup-image span').onclick = () =>{
+            document.querySelector('.popup-image').style.display = "none";
+        }
+  </script>
 </body>
 
 </html>

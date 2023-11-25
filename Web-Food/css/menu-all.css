@@ -27,165 +27,137 @@ html {
     font-family: 'Niramit', sans-serif;
 }
 
-/* main-village */
-.main-village {
-  background-color: #ffffff;
-  max-width: 1000px;
-  margin: 1.5rem auto;
-  border-radius: 10px;
-}
-
-.control_village{
-    margin: 1.5rem 0;
-    display: grid;
-    grid-template-columns: 500px 500px;
-    gap: 1rem;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0px 0px 5px rgba(0,0,0);
-    padding: 1rem;
-}
-.image-village {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  gap: 0.5rem;
-  height: 45rem;
-}
-.image-village img {
-  width: 100%;
-  height: 24rem;
-}
-
-.village-story {
-  width: 100%;
-  display: grid;
-  grid-template-columns: auto;
-  gap: 1rem;
-}
-.text_h1{
-  font-size: 1.2rem;
-}
-.flex_village {
-  width: 100%;
-  height: 30rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.5rem;
-}
-.flex_village .Vill-flex {
-  width: 100%;
-}
-.flex_village .Vill-flex img {
-  width: 100%;
-  height: 100%;
-  transition: 0.4s;
-}
-.flex_village .Vill-flex .flex1:hover {
-  box-shadow: 0px 10px 15px rgb(98, 97, 97);
-  transform: scale(1.03);
-}
- .text-village {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-/* food-village */
-.food-village {
-  margin: 2rem auto;
-  max-width: 1000px;
-  border-radius: 0.5rem;
-  padding: 1rem;
-}
-.food-village .food-item {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  border: 1px solid rgb(219, 218, 218);
-  box-shadow: 0px 10px 15px rgb(225, 225, 225);
-  margin: 1rem 0;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-}
-
-.food-village .food-item .food-image {
-  margin: 0.5rem;
-  width: 100%;
-  transition: 0.9s;
-  border-radius: 1rem;
-  display: grid;
-  grid-template-columns: repeat(1fr);
-  gap: 0.5rem;
-}
-
-.img_main{
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 0.5rem;
-}
-.food-village .food-item .food-image img {
-  width: 100%;
-  height: 100%;
-}
-
-.food-village .food-item .food-text {
-  width: 100%;
-  padding: 0 0.5rem;
-}
-.food-village .food-item .food-text p {
-  padding: 0 1rem;
-}
-.btn-food {
-  border-radius: 5px;
-  width: 30%;
-  display: flex;
+.container-main {
+  position: relative;
+  width: 1000px;
   margin: 1rem auto;
-  height: 35px;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid rgb(119, 119, 119);
-  color: #713f06;
-  transition: 0.4s;
-}
-.btn-food:hover {
-  background-color: #ff8d0b;
-  color: #fff;
-  border: 1px solid rgb(194, 194, 194);
 }
 
-/* popup */
-/* ซ่อน Popup Image เริ่มต้น */
-.popup {
-  display: none;
+.container-main .box-main {
+  display: grid;
+  grid-template-columns: 500px 500px;
+  gap: 1rem;
+  overflow: hidden;
+  padding: 1rem;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px rgb(184, 184, 184);
+}
+
+
+/* .container-main h1 {
+  font-size: 40px;
+  font-weight: normal;
+  padding: 15px;
+  color: #333;
+  text-align: left;
+  text-transform: capitalize;
+} */
+
+.container-main .box-main .image-main {
+  width: 500px;
+  overflow: hidden;
+  display: block;
+  justify-content: center;
+  
+}
+
+.container-main .box-main .image-main .image {
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0);
+  cursor: pointer;
+  background-position: center;
+  /* border-radius: 10px; */
+  
+}
+.container-main .box-main .image-main .image img{
+  width: 100%;
+  height: 100%;
+  transition: .2s;
+}
+.container-main.box-main .image-main .image img {
+  object-fit: cover;
+  transition: .2s linear;
+}
+
+.container-main .box-main .image-main .image:hover img {
+  transform: scale(1.1);
+}
+
+.container-main .box-main .image-contaner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  justify-content: center;
+  padding: 10px;
+}
+
+.container-main .box-main .image-contaner .image {
+  height: 250px;
+  width: 100%;
+  /* border: 1px solid #fff; */
+  overflow: hidden;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0);
+  cursor: pointer;
+  background-position: center;
+}
+
+.container-main .box-main .image-contaner .image img {
+  object-fit: cover;
+  transition: .2s linear;
+}
+
+.container-main .box-main .image-contaner .image:hover img {
+  transform: scale(1.1);
+}
+
+.container-main .popup-image {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
+  background: rgba(0, 0, 0, .9);
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  overflow: auto;
-  z-index: 999;
+  width: 100%;
+  z-index: 100;
+  display: none;
 }
 
-/* สไตล์ของรูปใน Popup */
-.popup img {
-  display: block;
-  margin: 1rem auto;
-  max-width: 70%;
-  max-height: 90%;
-  margin-top: 1%;
-  z-index: 999;
-}
-
-/* สไตล์ปุ่มปิด Popup */
-.close-button {
+.container-main .popup-image span {
   position: absolute;
-  top: 15px;
-  right: 15px;
-  font-size: 30px;
-  color: white;
+  top: 0;
+  right: 10px;
+  font-size: 60px;
+  font-weight: bolder;
+  color: #fff;
   cursor: pointer;
+  z-index: 101;
+}
+
+.container-main .popup-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid #fff;
+  border-radius: 5px;
+  width: 750px;
+  object-fit: cover;
+}
+
+.text_v .hov-text{
+  transition: .2s;
+}
+.text_v .hov-text i{
+  font-size: 20px;
+}
+.text_v .hov-text:hover i{
+  color: rgb(194, 9, 9);
+  text-shadow: 0px 2px 5px rgb(255, 0, 0);
+}
+.text_v .hov-text:hover{
+  color: rgb(50, 50, 50);
+
 }

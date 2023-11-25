@@ -89,14 +89,14 @@ foreach($user as $user){
 ?>
    <div class="slide">
           <div class="image">
-            <a href=""><img
+            <a href="/Web-Food/website/home.php?id=<?php echo $user['Id']; ?>"><img
             <?php echo 'src="data:image/jpeg;base64,'.base64_encode($user['Img']).'" ' ?>
                 alt="Image 1" /></a>
           </div>
           <div class="text_slide">
             <h1>ชื่อหมู่บ้าน :<?php echo $user['Name']; ?></h1>
             <p>ที่อยู่ : <?php echo $user['Location']; ?></p>
-            <a href="/Web-Food/website/deck.php?id=<?php echo $user['Id']; ?>" type="button" class="bg-white text-white font-bold py-2 px-4 rounded">
+            <a href="/Web-Food/website/home.php?id=<?php echo $user['Id']; ?>" type="button" class="bg-white text-white font-bold py-2 px-4 rounded">
               ข้อมูลเพิ่มเติม
           </a>
 

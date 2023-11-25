@@ -50,10 +50,12 @@ html {
   width: 100%;
   gap: 0.5rem;
   height: 45rem;
+  cursor: pointer;
 }
 .image-village img {
   width: 100%;
   height: 24rem;
+  
 }
 
 .village-story {
@@ -79,11 +81,7 @@ html {
 .flex_village .Vill-flex img {
   width: 100%;
   height: 100%;
-  transition: 0.4s;
-}
-.flex_village .Vill-flex .flex1:hover {
-  box-shadow: 0px 10px 15px rgb(98, 97, 97);
-  transform: scale(1.03);
+  transition: 0.4s; 
 }
 
 .text-village {
@@ -136,33 +134,59 @@ html {
 
 /* popup */
 /* ซ่อน Popup Image เริ่มต้น */
-.popup {
-  display: none;
+.Vill-flex .popup {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
+  background: rgba(0, 0, 0, .9);
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  overflow: auto;
-  z-index: 999;
+  width: 100%;
+  z-index: 100;
+  display: none;
+}
+ .image-village .popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, .9);
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  display: none;
 }
 
 /* สไตล์ของรูปใน Popup */
-.popup img {
-  display: block;
-  margin: 1rem auto;
-  max-width: 70%;
-  max-height: 90%;
-  margin-top: 1%;
+.image-village .popup img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid #fff;
+  border-radius: 5px;
+  width: 750px;
+  object-fit: cover;
+}
+.Vill-flex .popup img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid #fff;
+  border-radius: 5px;
+  width: 750px;
+  object-fit: cover;
 }
 
 /* สไตล์ปุ่มปิด Popup */
 .close-button {
   position: absolute;
-  top: 15px;
-  right: 15px;
-  font-size: 30px;
-  color: white;
+  top: 0;
+  right: 10px;
+  font-size: 60px;
+  font-weight: bolder;
+  color: #fff;
   cursor: pointer;
+  z-index: 101;
 }

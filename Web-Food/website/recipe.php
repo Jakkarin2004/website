@@ -64,7 +64,7 @@ $village->execute(); $ingredients = $village->fetch(); ?>
           <div id="mainopenPopup" class="popup">
             <span class="close-button" onclick="mainclosePopup()">&times;</span>
             <img
-              src="https://static.thairath.co.th/media/Dtbezn3nNUxytg04aoZ9f77r0DH1c3am84CfR9LvDIvVHh.webp"
+            <?php echo 'src="data:image/jpeg;base64,'.base64_encode($ingredients['ImgFood']).'" ' ?>
               alt="Image"
             />
           </div>
@@ -181,6 +181,6 @@ $village->execute(); $ingredients = $village->fetch(); ?>
     </div>
 
     <?php include '../include/footer.php' ?>
-    <script src="../js/recipe.js"></script>
+    <script src="../js/page3.js"></script>
   </body>
 </html>

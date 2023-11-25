@@ -8,8 +8,8 @@ html {
 }
 .content {
   margin: 0rem 0rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)),
-    url("https://images.unsplash.com/photo-1693237476029-f8469bb756a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80");
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../img/francesco-ungaro-3_MEgdUNMH0-unsplash.jpg");
   background-position: center;
   background-size: cover;
   height: 40vh;
@@ -36,14 +36,10 @@ body {
 }
 
 .control_village {
-  /* border: 1px solid red; */
-  box-shadow: 0 2px 5px rgba(61, 61, 61, 0.9);
-  padding: 5px;
   margin: 1.5rem 0;
   display: grid;
   grid-template-columns: 500px 500px;
   gap: 1rem;
-  border-radius: 5px;
 }
 .image-village {
   display: flex;
@@ -66,7 +62,7 @@ body {
   grid-template-columns: auto;
   gap: 1rem;
 }
-.text_h1 {
+.text_h1{
   font-size: 1.2rem;
 }
 .flex_village {
@@ -78,6 +74,7 @@ body {
 }
 .flex_village .Vill-flex {
   width: 100%;
+  cursor: pointer;
 }
 .flex_village .Vill-flex img {
   width: 100%;
@@ -149,22 +146,4 @@ body {
   color: #fff;
   cursor: pointer;
   z-index: 101;
-}
-
-.btn-food {
-  border-radius: 5px;
-  width: 30%;
-  display: flex;
-  margin: 1rem auto;
-  height: 35px;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid rgb(119, 119, 119);
-  color: #4a4a4a;
-  transition: 0.4s;
-}
-.btn-food:hover {
-  background-color: #0b40ff;
-  color: #fff;
-  border: 1px solid rgb(194, 194, 194);
 }

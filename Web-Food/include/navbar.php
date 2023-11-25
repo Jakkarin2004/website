@@ -24,7 +24,7 @@
                     <?php $stmt = $conn->query("SELECT * FROM village");
                                 $village = $stmt->fetchAll();
                                 foreach ($village as $village){ ?>
-                        <li><a href="../website/deck.php?id=<?php echo $village['Id']?>"><?php echo $village['Name'] ?></a></li>
+                        <li><a href="../website/home.php?id=<?php echo $village['Id']?>"><?php echo $village['Name'] ?></a></li>
                     <?php } ?>
                     </ul>
                 </li>
