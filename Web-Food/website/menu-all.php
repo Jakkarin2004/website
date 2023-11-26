@@ -54,7 +54,6 @@ $setfood = $stmt->fetchAll();
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="../css/menu-all.css">
-  <link rel="stylesheet" href="../css/menu-allrespon.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Taviraj:ital,wght@1,200&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -66,54 +65,79 @@ $setfood = $stmt->fetchAll();
 <?php include '../include/navbar.php' ?>
   <div class="content">
     <div class="content_village">
-    <h1 class="text-gray-900 text-xl font-bold">สำรับอาหาร</h1>
+    <h1 class="text-content">สำรับอาหาร</h1>
     </div>
   </div>
   <!--  -->
   <?php foreach($setfood as $setfood){ ?>
   <div class="container-main">
-        <div class="box-main">
-            <div class="image-main">
-                <div class="image-main">
-                    <div class="image"><img <?php echo 'src="data:image/jpeg;base64,'.base64_encode($setfood['ImgSet']).'" ' ?> alt=""></div>
-                </div>
-                <div class="image-contaner">
-                    <div class="image"><img src="https://images.unsplash.com/photo-1699614614449-d19235e38574?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
-                    <div class="image"><img src="https://images.unsplash.com/photo-1700578075560-ebacba6e5d22?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
-                      <div class="image"><img src="https://images.unsplash.com/photo-1700403748616-94e54842caf1?q=80&w=1933&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
-                    <div class="image"><img src="https://images.unsplash.com/photo-1682685797303-0ad51eb23e13?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
-                </div>
-                <div class="popup-image">
-                    <span>&times;</span>
-                    <img src="https://images.unsplash.com/photo-1699614614449-d19235e38574?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                </div>
+      <div class="box-main">
+        <div class="image-main">
+          <div>
+            <div class="img-main"> 
+              <img
+              <?php echo 'src="data:image/jpeg;base64,'.base64_encode($setfood['ImgSet']).'" ' ?> 
+                alt=""
+              />
             </div>
-            <div class="text-main">
-            <h1 class="text-left mt-1 text_h1"><?php echo $setfood['SetName'] ?></h1>
-              <h1 class="text_h1 text-left mt-3">มีตำรับอาหารดังนี้</h1>
-              <p class="text_v"> 
-              <?php  $totalsetfood = 0;
-                      for ($i = 0; $i < 7; $i++) { 
-                          if ($setfood['FoodName' . $i] != null) {
-                              $totalsetfood++;
-                          } else {
-                              break; 
-                          }
-                      } 
-                      for ($i = 0; $i < $totalsetfood; $i++) {
-                        $food = $setfood['FoodName' . $i];
-                        $Idfood = $setfood['IdFood' . $i];
-                      ?> 
-                <a class="hov-text" href="../website/recipe.php?id=<?php echo $Idfood?>"><?php echo $i+1,'.', $food ?><i class="ml-1 fa-solid fa-caret-left"></i></a><br>
-                <?php } ?>
-              </p>
+            <div class="image-flex">
+              <div class="flex">
+                <img
+                  src="https://images.unsplash.com/photo-1684610525381-34b7e6a098ef?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDI0fENEd3V3WEpBYkV3fHxlbnwwfHx8fHw%3D"
+                  alt=""
+                />
+              </div>
+              <div class="flex">
+                <img
+                  src="https://images.unsplash.com/photo-1699614614449-d19235e38574?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt=""
+                />
+              </div>
+              <div class="flex">
+                <img
+                  src="https://images.unsplash.com/photo-1700578075560-ebacba6e5d22?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt=""
+                />
+              </div>
+              <div class="flex">
+                <img
+                  src="https://images.unsplash.com/photo-1700403748616-94e54842caf1?q=80&w=1933&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt=""
+                />
+              </div>
             </div>
+          </div>
         </div>
+        <div class="popup-image">
+          <span>&times;</span>
+          <img
+            src="https://images.unsplash.com/photo-1699614614449-d19235e38574?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+          />
+        </div>
+        <div class="text-main">
+        <h1 class="text-left mt-1 text_h1"><?php echo $setfood['SetName'] ?></h1>
+                      <h1 class="text_h1 text-left mt-3">มีตำรับอาหารดังนี้</h1>
+                      <p class="text_v"> 
+                      <?php  $totalsetfood = 0;
+                              for ($i = 0; $i < 7; $i++) { 
+                                  if ($setfood['FoodName' . $i] != null) {
+                                      $totalsetfood++;
+                                  } else {
+                                      break; 
+                                  }
+                              } 
+                              for ($i = 0; $i < $totalsetfood; $i++) {
+                                $food = $setfood['FoodName' . $i];
+                                $Idfood = $setfood['IdFood' . $i];
+                              ?> 
+                        <a class="text-respon" href="../website/recipe.php?id=<?php echo $Idfood?>"><?php echo $i+1,'.', $food ?><i class="ml-1 fa-solid fa-caret-left"></i></a><br>
+                        <?php } ?>
+        </div>
+      </div>
     </div>
     <?php } ?>
   <!--  -->
-
-    </div>
 
   <?php include '../include/footer.php' ?>
   <script>

@@ -56,7 +56,6 @@ $setfood = $village->fetch();
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="../css/menu.css">
-  <link rel="stylesheet" href="../css/menurespon.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,77 +71,58 @@ $setfood = $village->fetch();
 <body class="font-body">
   <div class="content">
     <div class="content_village">
-      <h1>สำรับอาหาร <?php echo $setfood['Name'] ?></h1>
+      <h1 class="text-content">สำรับอาหาร <?php echo $setfood['Name'] ?></h1>
     </div>
   </div>
-  <div class="main-village">
-    <div class="control_village">
-      <div class="image-village">
-        <img
-        <?php echo 'src="data:image/jpeg;base64,'.base64_encode($setfood['ImgSet']).'" ' ?> 
-          onclick="mainopenPopup()" class="flex1"
-          />
-          <div id="mainopenPopup" class="popup">
-            <span class="close-button" onclick="mainclosePopup()">&times;</span>
-            <img
-            <?php echo 'src="data:image/jpeg;base64,'.base64_encode($setfood['ImgSet']).'" ' ?> 
-          onclick="mainopenPopup()" class="flex1"
-              alt="Image" />
-          </div>
-        <div class="flex_village">
-          <div class="Vill-flex">
-            <img
-              src="https://images.unsplash.com/photo-1682686580391-615b1f28e5ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=600&q=60"
-              alt="" onclick="openPopup()" class="flex1">
-            <div id="image-popup" class="popup">
-              <span class="close-button" onclick="closePopup()">&times;</span>
+  <!--  -->
+  <div class="container-main">
+      <div class="box-main">
+        <div class="image-main">
+          <div>
+            <div class="img-main"> 
               <img
-                src="https://images.unsplash.com/photo-1682686580391-615b1f28e5ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=600&q=60"
-                alt="Image" />
+              <?php echo 'src="data:image/jpeg;base64,'.base64_encode($setfood['ImgSet']).'" ' ?> 
+                alt=""
+              />
             </div>
-          </div>
-          <div class="Vill-flex">
-            <img
-              src="https://images.unsplash.com/photo-1695418624968-d027093abdb9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=600&q=60"
-              alt="" onclick="openPopup1()" class="flex1">
-            <div id="image-popup1" class="popup">
-              <span class="close-button" onclick="closePopup1()">&times;</span>
-              <img
-                src="https://images.unsplash.com/photo-1695418624968-d027093abdb9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=600&q=60"
-                alt="Image" />
-            </div>
-          </div>
-          <div class="Vill-flex">
-            <img
-              src="https://images.unsplash.com/photo-1695751240056-c9aea1e799df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxM3x8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60"
-              alt="" onclick="openPopup2()" class="flex1">
-            <div id="image-popup2" class="popup">
-              <span class="close-button" onclick="closePopup2()">&times;</span>
-              <img
-                src="https://images.unsplash.com/photo-1695751240056-c9aea1e799df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxM3x8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60"
-                alt="Image" />
-            </div>
-          </div>
-          <div class="Vill-flex">
-            <img
-              src="https://images.unsplash.com/photo-1682685797660-3d847763208e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwyMXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60"
-              alt="" onclick="openPopup3()" class="flex1">
-            <div id="image-popup3" class="popup">
-              <span class="close-button" onclick="closePopup3()">&times;</span>
-              <img
-                src="https://images.unsplash.com/photo-1682685797660-3d847763208e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwyMXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60"
-                alt="Image" />
+            <div class="image-flex">
+              <div class="flex">
+                <img
+                  src="https://images.unsplash.com/photo-1684610525381-34b7e6a098ef?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDI0fENEd3V3WEpBYkV3fHxlbnwwfHx8fHw%3D"
+                  alt=""
+                />
+              </div>
+              <div class="flex">
+                <img
+                  src="https://images.unsplash.com/photo-1699614614449-d19235e38574?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt=""
+                />
+              </div>
+              <div class="flex">
+                <img
+                  src="https://images.unsplash.com/photo-1700578075560-ebacba6e5d22?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt=""
+                />
+              </div>
+              <div class="flex">
+                <img
+                  src="https://images.unsplash.com/photo-1700403748616-94e54842caf1?q=80&w=1933&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt=""
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-  
-      <div class="village-story">
-        <div class="text-village">
-          <div class="text_vill">
-            <h1 class="text-left mt-1 text_h1"><?php echo $setfood['SetName'] ?></h1>
-            <h1 class="text_h1 text-left mt-3">มีตำรับอาหารดังนี้</h1>
-            <p class="text_v">  
+        <div class="popup-image">
+          <span>&times;</span>
+          <img
+            src="https://images.unsplash.com/photo-1699614614449-d19235e38574?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+          />
+        </div>
+        <div class="text-main">
+          <h1 class="text-left mt-1 "><b><?php echo $setfood['SetName'] ?></b></h1>
+          <p class="">  
             <?php  $totalsetfood = 0;
                     for ($i = 0; $i < 7; $i++) { 
                         if ($setfood['FoodName' . $i] != null) {
@@ -155,16 +135,26 @@ $setfood = $village->fetch();
                       $food = $setfood['FoodName' . $i];
                       $Idfood = $setfood['IdFood' . $i];
                     ?>
-               <a href="../website/recipe.php?id=<?php echo $Idfood ?>"><?php echo ($i+1),". ",$food; ?><i class="ml-1 fa-solid fa-caret-left"></i></a><br>
+               <a class="text-respon" href="../website/recipe.php?id=<?php echo $Idfood ?>"><?php echo ($i+1),". ",$food; ?><i class="ml-1 fa-solid fa-caret-left"></i></a><br>
             </p>
             <?php } ?>
-          </div>
         </div>
       </div>
     </div>
-  </div>
+  <!--  -->
   <?php include '../include/footer.php' ?>
-  <script src="../js/page3.js"></script>
+  <script>
+      document.querySelectorAll(".image-main img").forEach((image) => {
+        image.onclick = () => {
+          document.querySelector(".popup-image").style.display = "block";
+          document.querySelector(".popup-image img").src =
+            image.getAttribute("src");
+        };
+      });
+      document.querySelector(".popup-image span").onclick = () => {
+        document.querySelector(".popup-image").style.display = "none";
+      };
+    </script>
 </body>
 
 </html>

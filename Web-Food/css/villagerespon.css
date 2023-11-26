@@ -1,17 +1,9 @@
 @media (max-width: 1300px) {
-  .footer {
-    max-width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
+  
 }
 
 @media (max-width: 1100px) {
-  .footer {
-    max-width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
+
 }
 
 @media (max-width: 950px) {
@@ -170,6 +162,9 @@
   .Vill-flex .popup img {
     width: 95%;
   }
+  .text_slide{
+    line-height: 10px;
+  }
 
 }
 
@@ -212,7 +207,7 @@
 
   .text p {
     font-size: 12px;
-    line-height: 15px;
+    /* line-height: 15px; */
     max-width: 100%;
   }
 
