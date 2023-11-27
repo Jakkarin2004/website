@@ -26,7 +26,7 @@ $Idvillage = $conn->prepare($sqlvillage);
 $Idvillage->execute();
 $Idvill = $Idvillage->fetchAll(PDO::FETCH_COLUMN);
 
-$sqls = "SELECT ImgFood FROM food";
+$sqls = "SELECT ImgFood1 FROM food";
 $foodimg = $conn->prepare($sqls);
 $foodimg->execute();
 $imgFood = $foodimg->fetchAll(PDO::FETCH_COLUMN);
@@ -326,7 +326,7 @@ if (isset($_GET['delete'])) {
                         ?>
                 <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                 <td scope="row" class="px-6 py-4 font-normal text-gray-600 font "><?php echo $result['Idset']; ?></td>
-                <td><?php echo '<img src="data:image/jpeg;base64,'.base64_encode($result['ImgSet']).'" alt="Upload Image"  style="width: 150px; height: 100px" class="rounded-lg thumbnail "  "/>' ?></td>
+                <td><?php echo '<img src="data:image/jpeg;base64,'.base64_encode($result['ImgSet1']).'" alt="Upload Image"  style="width: 150px; height: 100px" class="rounded-lg thumbnail "  "/>' ?></td>
         
                 <td class="px-6 py-4 font-normal text-gray-600 font"><?php echo $result['Name']; ?></td>
                 <td class="px-6 py-4 font-normal text-gray-600 font"><?php echo $result['SetName']; ?></td>
@@ -347,7 +347,7 @@ if (isset($_GET['delete'])) {
             ?>
                 <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                 <td scope="row" class="px-6 py-4 font-normal text-gray-600 font"><?php echo $startRowNumber + $row ; ?></td>
-                <td><?php echo '<img src="data:image/jpeg;base64,'.base64_encode($setfood['ImgSet']).'" alt="Upload Image"  style="width: 150px; height: 100px" class="rounded-lg thumbnail "  "/>' ?></td>
+                <td><?php echo '<img src="data:image/jpeg;base64,'.base64_encode($setfood['ImgSet1']).'" alt="Upload Image"  style="width: 150px; height: 100px" class="rounded-lg thumbnail "  "/>' ?></td>
         
                 <td class="px-6 py-4 font-normal text-gray-600 font"><?php echo $setfood['Name']; ?></td>
                 <td class="px-6 py-4 font-normal text-gray-600 font"><?php echo $setfood['SetName']; ?></td>

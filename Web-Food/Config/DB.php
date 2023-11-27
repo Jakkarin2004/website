@@ -2,7 +2,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "webfood";
+    $dbname = "webfood2";
 
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);

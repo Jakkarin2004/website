@@ -289,7 +289,7 @@ if (isset($_GET['delete'])) {
 
             <td scope="row" class="px-6 py-4 font-normal text-gray-600 font-medium text-gray-900 whitespace-nowrap dark:text-white font"><?php echo $startRowNumber + $row ?></td>
             <div>
-                <td class="p-2"><?php echo '<img src="data:image/jpeg;base64,' . base64_encode($ingredients['ImgIngre']) . '" alt="Upload Image"  style="width: 150px; height: 100px" class="rounded-lg thumbnail "  "/>' ?></td>
+                <td class="p-2"><?php echo '<img src="data:image/jpeg;base64,' . base64_encode($ingredients['ImgIngre1']) . '" alt="Upload Image"  style="width: 150px; height: 100px" class="rounded-lg thumbnail "  "/>' ?></td>
             </div>
             <td class="px-6 py-4 font-normal text-gray-600 font"><?php echo $ingredients['ingredientsName']; ?></td>
             <td>

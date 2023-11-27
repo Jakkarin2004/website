@@ -1,11 +1,11 @@
 <?php
 include ("../Config/DB.php");
 $id = $_GET['id'];
-$village = $conn->query("SELECT F.Detail,FoodName,F.ImgFood, I.ImgIngre AS
-ImgIngre0, I1.ImgIngre AS ImgIngre1, I2.ImgIngre AS ImgIngre2, I3.ImgIngre AS
-ImgIngre3, I4.ImgIngre AS ImgIngre4, I5.ImgIngre AS ImgIngre5, I6.ImgIngre AS
-ImgIngre6, I7.ImgIngre AS ImgIngre7, I8.ImgIngre AS ImgIngre8, I9.ImgIngre AS
-ImgIngre9, I10.ImgIngre AS ImgIngre10, I11.ImgIngre AS ImgIngre11, I12.ImgIngre
+$village = $conn->query("SELECT F.Detail,FoodName,F.ImgFood1, I.ImgIngre1 AS
+ImgIngre0, I1.ImgIngre1 AS ImgIngre1, I2.ImgIngre1 AS ImgIngre2, I3.ImgIngre1 AS
+ImgIngre3, I4.ImgIngre1 AS ImgIngre4, I5.ImgIngre1 AS ImgIngre5, I6.ImgIngre1 AS
+ImgIngre6, I7.ImgIngre1 AS ImgIngre7, I8.ImgIngre1 AS ImgIngre8, I9.ImgIngre1 AS
+ImgIngre9, I10.ImgIngre1 AS ImgIngre10, I11.ImgIngre1 AS ImgIngre11, I12.ImgIngre1
 AS ImgIngre12, I.ingredientsName AS IngreName0, I1.ingredientsName AS
 IngreName1, I2.ingredientsName AS IngreName2, I3.ingredientsName AS IngreName3,
 I4.ingredientsName AS IngreName4, I5.ingredientsName AS IngreName5,
@@ -61,7 +61,7 @@ $village->execute(); $ingredients = $village->fetch(); ?>
           <div>
             <div class="img-main"> 
               <img
-              <?php echo 'src="data:image/jpeg;base64,'.base64_encode($ingredients['ImgFood']).'" ' ?>
+              <?php echo 'src="data:image/jpeg;base64,'.base64_encode($ingredients['ImgFood1']).'" ' ?>
                 alt=""
               />
             </div>

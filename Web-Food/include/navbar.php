@@ -18,13 +18,13 @@
 
         <nav class="navbar">
             <ul>
-                <li><a href="../website/village.php">หน้าหลัก</a></li>
+                <li><a href="../website/home.php">หน้าหลัก</a></li>
                 <li><a href="#">หมู่บ้าน</a>
                     <ul>
                     <?php $stmt = $conn->query("SELECT * FROM village");
                                 $village = $stmt->fetchAll();
                                 foreach ($village as $village){ ?>
-                        <li><a href="../website/home.php?id=<?php echo $village['Id']?>"><?php echo $village['Name'] ?></a></li>
+                        <li><a href="../website/village.php?id=<?php echo $village['Id']?>"><?php echo $village['Name'] ?></a></li>
                     <?php } ?>
                     </ul>
                 </li>
@@ -52,7 +52,7 @@
                         </li>
                     </ul>
                 </li>
-                <li><a href="#">ตำหรับ <i class="fa-solid fa-caret-down"></i></a>
+                <li><a href="#">ตำรับ <i class="fa-solid fa-caret-down"></i></a>
                     <ul class="recipe">
                     <?php $stmt = $conn->query("SELECT * FROM food");
                                 $food = $stmt->fetchAll();

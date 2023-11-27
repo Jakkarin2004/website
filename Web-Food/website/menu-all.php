@@ -1,13 +1,13 @@
 <?php
 include("../Config/DB.php");
-$stmt = $conn->query("SELECT S.Idset, S.ImgSet, V.Name, S.SetName,V.Id,
-F.ImgFood AS ImgFood0,
-F1.ImgFood AS ImgFood1,
-F2.ImgFood AS ImgFood2,
-F3.ImgFood AS ImgFood3,
-F4.ImgFood AS ImgFood4,
-F5.ImgFood AS ImgFood5,
-F6.ImgFood AS ImgFood6,
+$stmt = $conn->query("SELECT S.Idset, S.ImgSet1, V.Name, S.SetName,V.Id,
+F.ImgFood1 AS ImgFood0,
+F1.ImgFood1 AS ImgFood1,
+F2.ImgFood1 AS ImgFood2,
+F3.ImgFood1 AS ImgFood3,
+F4.ImgFood1 AS ImgFood4,
+F5.ImgFood1 AS ImgFood5,
+F6.ImgFood1 AS ImgFood6,
 F.Detail AS FoodDetail0,
 F1.Detail AS FoodDetail1,
 F2.Detail AS FoodDetail2,
@@ -76,7 +76,7 @@ $setfood = $stmt->fetchAll();
           <div>
             <div class="img-main"> 
               <img
-              <?php echo 'src="data:image/jpeg;base64,'.base64_encode($setfood['ImgSet']).'" ' ?> 
+              <?php echo 'src="data:image/jpeg;base64,'.base64_encode($setfood['ImgSet1']).'" ' ?> 
                 alt=""
               />
             </div>

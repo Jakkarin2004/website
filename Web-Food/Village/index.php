@@ -299,7 +299,7 @@ if(isset($_GET['delete'])){
     ?>
         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
         <td scope="row" class="px-6 py-4 font-normal text-gray-600 font"><?php echo $startRowNumber + $row ?></td>
-        <td class="p-2"><?php echo '<img src="data:image/jpeg;base64,'.base64_encode($user['Img']).'" alt="Upload Image"  style="width: 150px; height: 100px" class="rounded-md images "  "/>' ?></td>
+        <td class="p-2"><?php echo '<img src="data:image/jpeg;base64,'.base64_encode($user['Img1']).'" alt="Upload Image"  style="width: 150px; height: 100px" class="rounded-md images "  "/>' ?></td>
         <td class="px-6 py-4 font-normal text-gray-600 font"><?php echo $user['Name']; ?></td>
         <td class="px-6 py-4 font-normal text-gray-600 text-container font"><?php echo $user['Location']; ?></td>
         <td >

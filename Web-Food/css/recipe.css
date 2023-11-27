@@ -280,7 +280,7 @@ html {
   .food-village {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.5rem;
+    gap: 2px;
   }
 
   .food-village .food-item {
@@ -305,9 +305,9 @@ html {
     font-size: 7vw;
     color: #dfdfdf;
   }
-  .food-village {
+  /* .food-village {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
-  }
+  } */
 }
